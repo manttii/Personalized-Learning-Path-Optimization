@@ -1,0 +1,341 @@
+{
+  "student": {
+    "id": "2510011893",
+    "name": "Priyanshi Saini",
+    "email": "priyanshi@geu.ac.in",
+    "goal_node": "T12",
+    "avg_proficiency": 0.140,
+    "mastered_count": 2,
+    "total_estimated_hours": 65.01
+  },
+  "nodes": [
+    {
+      "id": "T01",
+      "title": "Time & Space Complexity",
+      "category": "Foundations",
+      "base_hours": 3.00,
+      "difficulty": 1.50,
+      "proficiency": 0.90,
+      "effective_weight": 3.10,
+      "is_mastered": true,
+      "in_path": true,
+      "path_order": 1,
+      "description": "Asymptotic notation, Big-O, recurrence relations"
+    },
+    {
+      "id": "T02",
+      "title": "Arrays & Dynamic Memory",
+      "category": "Linear DS",
+      "base_hours": 4.00,
+      "difficulty": 2.00,
+      "proficiency": 0.85,
+      "effective_weight": 4.21,
+      "is_mastered": true,
+      "in_path": true,
+      "path_order": 2,
+      "description": "Dynamic vectors, pointer arithmetic, contiguous cache"
+    },
+    {
+      "id": "T03",
+      "title": "Linked Lists",
+      "category": "Linear DS",
+      "base_hours": 5.00,
+      "difficulty": 2.50,
+      "proficiency": 0.00,
+      "effective_weight": 6.75,
+      "is_mastered": false,
+      "in_path": true,
+      "path_order": 4,
+      "description": "Singly/Doubly linked lists, pointer manipulation, Floyd cycle detection"
+    },
+    {
+      "id": "T04",
+      "title": "Stacks & Queues",
+      "category": "Linear DS",
+      "base_hours": 4.00,
+      "difficulty": 2.00,
+      "proficiency": 0.00,
+      "effective_weight": 5.40,
+      "is_mastered": false,
+      "in_path": true,
+      "path_order": 3,
+      "description": "LIFO/FIFO, evaluation of expressions, circular queues"
+    },
+    {
+      "id": "T05",
+      "title": "Recursion & Backtracking",
+      "category": "Paradigms",
+      "base_hours": 6.00,
+      "difficulty": 3.50,
+      "proficiency": 0.35,
+      "effective_weight": 8.27,
+      "is_mastered": false,
+      "in_path": true,
+      "path_order": 6,
+      "description": "Call stack frame, base conditions, recursion trees, N-Queens"
+    },
+    {
+      "id": "T06",
+      "title": "Binary Trees & Traversals",
+      "category": "Hierarchical DS",
+      "base_hours": 5.50,
+      "difficulty": 3.00,
+      "proficiency": 0.00,
+      "effective_weight": 8.70,
+      "is_mastered": false,
+      "in_path": true,
+      "path_order": 7,
+      "description": "Inorder, Preorder, Postorder recursive and iterative traversal"
+    },
+    {
+      "id": "T07",
+      "title": "BST & Balanced AVL Trees",
+      "category": "Hierarchical DS",
+      "base_hours": 6.50,
+      "difficulty": 4.00,
+      "proficiency": 0.00,
+      "effective_weight": 9.68,
+      "is_mastered": false,
+      "in_path": false,
+      "path_order": -1,
+      "description": "BST invariant, search, insert, delete, AVL rotations"
+    },
+    {
+      "id": "T08",
+      "title": "Binary Heaps & Priority Queues",
+      "category": "Hierarchical DS",
+      "base_hours": 4.50,
+      "difficulty": 3.00,
+      "proficiency": 0.00,
+      "effective_weight": 6.98,
+      "is_mastered": false,
+      "in_path": true,
+      "path_order": 8,
+      "description": "Min/Max heap, heapify up/down, priority queue ops"
+    },
+    {
+      "id": "T09",
+      "title": "Graph Representations",
+      "category": "Graph Theory",
+      "base_hours": 4.00,
+      "difficulty": 2.50,
+      "proficiency": 0.00,
+      "effective_weight": 6.30,
+      "is_mastered": false,
+      "in_path": true,
+      "path_order": 5,
+      "description": "Adjacency matrix vs Adjacency list representation"
+    },
+    {
+      "id": "T10",
+      "title": "Graph Traversals (BFS & DFS)",
+      "category": "Graph Theory",
+      "base_hours": 6.00,
+      "difficulty": 3.50,
+      "proficiency": 0.00,
+      "effective_weight": 10.28,
+      "is_mastered": false,
+      "in_path": true,
+      "path_order": 9,
+      "description": "Queue-based BFS, recursive/stack DFS, components"
+    },
+    {
+      "id": "T11",
+      "title": "Topological Sort & DAGs",
+      "category": "Graph Theory",
+      "base_hours": 5.00,
+      "difficulty": 3.50,
+      "proficiency": 0.00,
+      "effective_weight": 7.65,
+      "is_mastered": false,
+      "in_path": false,
+      "path_order": -1,
+      "description": "Kahns algorithm, dependency scheduling, cycle detection"
+    },
+    {
+      "id": "T12",
+      "title": "Dijkstra's Shortest Path",
+      "category": "Graph Algorithms",
+      "base_hours": 7.00,
+      "difficulty": 4.50,
+      "proficiency": 0.00,
+      "effective_weight": 11.25,
+      "is_mastered": false,
+      "in_path": true,
+      "path_order": 10,
+      "description": "Greedy edge relaxation with min-heap priority queue"
+    },
+    {
+      "id": "T13",
+      "title": "Minimum Spanning Trees",
+      "category": "Graph Algorithms",
+      "base_hours": 6.50,
+      "difficulty": 4.00,
+      "proficiency": 0.00,
+      "effective_weight": 10.58,
+      "is_mastered": false,
+      "in_path": false,
+      "path_order": -1,
+      "description": "Prim's & Kruskal's algorithms with Disjoint Set Union (DSU)"
+    },
+    {
+      "id": "T14",
+      "title": "Dynamic Programming",
+      "category": "Advanced Paradigms",
+      "base_hours": 8.00,
+      "difficulty": 5.00,
+      "proficiency": 0.00,
+      "effective_weight": 12.08,
+      "is_mastered": false,
+      "in_path": false,
+      "path_order": -1,
+      "description": "Optimal substructure, overlapping subproblems, memoization"
+    },
+    {
+      "id": "T15",
+      "title": "Graph Dynamic Programming",
+      "category": "Advanced Paradigms",
+      "base_hours": 7.50,
+      "difficulty": 5.00,
+      "proficiency": 0.00,
+      "effective_weight": 11.93,
+      "is_mastered": false,
+      "in_path": false,
+      "path_order": -1,
+      "description": "Floyd-Warshall, Bellman-Ford, DAG longest paths"
+    }
+  ],
+  "edges": [
+    {
+      "from": "T01",
+      "to": "T02",
+      "weight": 1.00
+    },
+    {
+      "from": "T01",
+      "to": "T05",
+      "weight": 1.20
+    },
+    {
+      "from": "T02",
+      "to": "T03",
+      "weight": 1.00
+    },
+    {
+      "from": "T02",
+      "to": "T04",
+      "weight": 1.00
+    },
+    {
+      "from": "T02",
+      "to": "T08",
+      "weight": 1.00
+    },
+    {
+      "from": "T02",
+      "to": "T09",
+      "weight": 1.00
+    },
+    {
+      "from": "T03",
+      "to": "T06",
+      "weight": 1.00
+    },
+    {
+      "from": "T03",
+      "to": "T09",
+      "weight": 1.00
+    },
+    {
+      "from": "T04",
+      "to": "T05",
+      "weight": 1.10
+    },
+    {
+      "from": "T04",
+      "to": "T10",
+      "weight": 1.10
+    },
+    {
+      "from": "T05",
+      "to": "T06",
+      "weight": 1.30
+    },
+    {
+      "from": "T05",
+      "to": "T10",
+      "weight": 1.30
+    },
+    {
+      "from": "T05",
+      "to": "T14",
+      "weight": 1.50
+    },
+    {
+      "from": "T06",
+      "to": "T07",
+      "weight": 1.20
+    },
+    {
+      "from": "T06",
+      "to": "T08",
+      "weight": 1.10
+    },
+    {
+      "from": "T06",
+      "to": "T14",
+      "weight": 1.20
+    },
+    {
+      "from": "T08",
+      "to": "T12",
+      "weight": 1.40
+    },
+    {
+      "from": "T08",
+      "to": "T13",
+      "weight": 1.20
+    },
+    {
+      "from": "T09",
+      "to": "T10",
+      "weight": 1.00
+    },
+    {
+      "from": "T10",
+      "to": "T11",
+      "weight": 1.20
+    },
+    {
+      "from": "T10",
+      "to": "T12",
+      "weight": 1.30
+    },
+    {
+      "from": "T10",
+      "to": "T13",
+      "weight": 1.20
+    },
+    {
+      "from": "T12",
+      "to": "T15",
+      "weight": 1.30
+    },
+    {
+      "from": "T14",
+      "to": "T15",
+      "weight": 1.40
+    }
+  ],
+  "current_path": ["T01", "T02", "T04", "T03", "T09", "T05", "T06", "T08", "T10", "T12"],
+  "evaluation_history": [
+    {
+      "topic_id": "T05",
+      "score": 0.35,
+      "passed": false,
+      "timestamp": "2026-10-03 03:51:33",
+      "weight_before": 9.00,
+      "weight_after": 8.27
+    }
+  ]
+}

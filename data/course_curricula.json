@@ -1,0 +1,142 @@
+{
+  "course_name": "Data Structures and Algorithms Mastery",
+  "course_code": "CS-201",
+  "description": "Adaptive Graph-Driven Computer Science Curriculum",
+  "topics": [
+    {
+      "id": "T01",
+      "name": "Time & Space Complexity (Asymptotic Notation)",
+      "category": "Foundations",
+      "base_hours": 3.0,
+      "difficulty": 1.5,
+      "prerequisites": [],
+      "description": "Big-O, Big-Omega, Big-Theta notation, recurrence relations, best/average/worst case analysis."
+    },
+    {
+      "id": "T02",
+      "name": "Arrays & Dynamic Memory Allocation",
+      "category": "Linear Data Structures",
+      "base_hours": 4.0,
+      "difficulty": 2.0,
+      "prerequisites": ["T01"],
+      "description": "Contiguous memory layout, pointers, dynamic arrays (std::vector), cache locality."
+    },
+    {
+      "id": "T03",
+      "name": "Singly & Doubly Linked Lists",
+      "category": "Linear Data Structures",
+      "base_hours": 5.0,
+      "difficulty": 2.5,
+      "prerequisites": ["T02"],
+      "description": "Node pointers, dynamic memory allocation, insertion, deletion, cycle detection (Floyd's algorithm)."
+    },
+    {
+      "id": "T04",
+      "name": "Stacks & Queues",
+      "category": "Linear Data Structures",
+      "base_hours": 4.0,
+      "difficulty": 2.0,
+      "prerequisites": ["T02"],
+      "description": "LIFO/FIFO properties, array and linked list backings, parentheses matching, monotonic stacks."
+    },
+    {
+      "id": "T05",
+      "name": "Recursion & Backtracking",
+      "category": "Algorithmic Paradigms",
+      "base_hours": 6.0,
+      "difficulty": 3.5,
+      "prerequisites": ["T01", "T04"],
+      "description": "Call stack execution, base conditions, recurrence trees, N-Queens, subset generation."
+    },
+    {
+      "id": "T06",
+      "name": "Binary Trees & Tree Traversals",
+      "category": "Hierarchical Data Structures",
+      "base_hours": 5.5,
+      "difficulty": 3.0,
+      "prerequisites": ["T03", "T05"],
+      "description": "Node structures, Inorder, Preorder, Postorder (recursive and iterative with stack), Level-order."
+    },
+    {
+      "id": "T07",
+      "name": "Binary Search Trees (BST) & AVL Trees",
+      "category": "Hierarchical Data Structures",
+      "base_hours": 6.5,
+      "difficulty": 4.0,
+      "prerequisites": ["T06"],
+      "description": "BST invariant, searching, insertion, deletion, AVL rotations, balanced tree height guarantees."
+    },
+    {
+      "id": "T08",
+      "name": "Binary Heaps & Priority Queues",
+      "category": "Hierarchical Data Structures",
+      "base_hours": 4.5,
+      "difficulty": 3.0,
+      "prerequisites": ["T02", "T06"],
+      "description": "Min-heap/Max-heap property, array representation, heapify up/down, priority queues."
+    },
+    {
+      "id": "T09",
+      "name": "Graph Representation (Adjacency Matrix & List)",
+      "category": "Graph Theory",
+      "base_hours": 4.0,
+      "difficulty": 2.5,
+      "prerequisites": ["T02", "T03"],
+      "description": "Vertices, edges, directed vs undirected, adjacency matrix vs adjacency list trade-offs."
+    },
+    {
+      "id": "T10",
+      "name": "Graph Traversals (BFS & DFS)",
+      "category": "Graph Theory",
+      "base_hours": 6.0,
+      "difficulty": 3.5,
+      "prerequisites": ["T04", "T05", "T09"],
+      "description": "Breadth-First Search using queues, Depth-First Search using recursion/stack, connected components."
+    },
+    {
+      "id": "T11",
+      "name": "Topological Sort & DAG Cycle Detection",
+      "category": "Graph Theory",
+      "base_hours": 5.0,
+      "difficulty": 3.5,
+      "prerequisites": ["T10"],
+      "description": "Kahn's in-degree algorithm (queue), DFS back-edge detection, course scheduling models."
+    },
+    {
+      "id": "T12",
+      "name": "Single-Source Shortest Paths (Dijkstra's Algorithm)",
+      "category": "Advanced Graph Algorithms",
+      "base_hours": 7.0,
+      "difficulty": 4.5,
+      "prerequisites": ["T08", "T10"],
+      "description": "Greedy relaxation, min-heap priority queue optimization, non-negative edge weights."
+    },
+    {
+      "id": "T13",
+      "name": "Minimum Spanning Trees (Prim's & Kruskal's with Disjoint Sets)",
+      "category": "Advanced Graph Algorithms",
+      "base_hours": 6.5,
+      "difficulty": 4.0,
+      "prerequisites": ["T08", "T10"],
+      "description": "Cut property, Union-Find Disjoint Set data structure (path compression + rank), greedy MST."
+    },
+    {
+      "id": "T14",
+      "name": "Dynamic Programming (Memoization & Tabulation)",
+      "category": "Advanced Paradigms",
+      "base_hours": 8.0,
+      "difficulty": 5.0,
+      "prerequisites": ["T05", "T06"],
+      "description": "Overlapping subproblems, optimal substructure, 1D/2D DP, 0/1 Knapsack, Longest Common Subsequence."
+    },
+    {
+      "id": "T15",
+      "name": "Graph Dynamic Programming & All-Pairs Shortest Path",
+      "category": "Advanced Paradigms",
+      "base_hours": 7.5,
+      "difficulty": 5.0,
+      "prerequisites": ["T12", "T14"],
+      "description": "Floyd-Warshall algorithm, Bellman-Ford negative cycle detection, DAG longest path DP."
+    }
+  ]
+}

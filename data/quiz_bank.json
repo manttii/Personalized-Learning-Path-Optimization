@@ -1,0 +1,136 @@
+{
+  "questions": [
+    {
+      "topic_id": "T01",
+      "question": "What is the time complexity of searching an element in an unsorted array of size N?",
+      "options": ["O(1)", "O(log N)", "O(N)", "O(N log N)"],
+      "correct_index": 2,
+      "explanation": "In an unsorted array, we may need to inspect all N elements in the worst case (Linear Search)."
+    },
+    {
+      "topic_id": "T01",
+      "question": "Which asymptotic notation gives the tightest bound for both upper and lower limits?",
+      "options": ["Big-O (O)", "Big-Omega (Ω)", "Big-Theta (Θ)", "Little-o (o)"],
+      "correct_index": 2,
+      "explanation": "Big-Theta (Θ) specifies both asymptotic upper and lower bounds simultaneously."
+    },
+    {
+      "topic_id": "T02",
+      "question": "Why does accessing an element in an array have O(1) time complexity?",
+      "options": [
+        "Because elements are stored with hash keys",
+        "Because memory is contiguous and index offset can be directly calculated",
+        "Because compiler caches all values in registers",
+        "Because arrays use binary search internally"
+      ],
+      "correct_index": 1,
+      "explanation": "Base address + index * element_size gives immediate memory address in O(1)."
+    },
+    {
+      "topic_id": "T03",
+      "question": "What is the time complexity to insert a new node at the head of a Singly Linked List?",
+      "options": ["O(1)", "O(N)", "O(log N)", "O(N^2)"],
+      "correct_index": 0,
+      "explanation": "Inserting at the head only requires updating the new node's next pointer and head pointer in O(1)."
+    },
+    {
+      "topic_id": "T04",
+      "question": "Which data structure is fundamentally used for function call stacks during recursion?",
+      "options": ["Queue", "Stack", "Min-Heap", "Circular Buffer"],
+      "correct_index": 1,
+      "explanation": "The call stack operates under Last-In First-Out (LIFO) semantics."
+    },
+    {
+      "topic_id": "T05",
+      "question": "What happens if a recursive function does not have a proper base case?",
+      "options": [
+        "It returns null",
+        "Stack Overflow error due to infinite recursive calls",
+        "Memory leak in heap",
+        "Segmentation fault in GPU"
+      ],
+      "correct_index": 1,
+      "explanation": "Without a base termination condition, activation records exhaust the call stack limit."
+    },
+    {
+      "topic_id": "T06",
+      "question": "Inorder traversal of a Binary Search Tree (BST) visits nodes in which order?",
+      "options": ["Decreasing order", "Strictly ascending sorted order", "Breadth-first order", "Random order"],
+      "correct_index": 1,
+      "explanation": "Inorder traversal (Left, Root, Right) always outputs values of a BST in ascending order."
+    },
+    {
+      "topic_id": "T07",
+      "question": "What is the worst-case search time complexity in a skewed Binary Search Tree of N nodes?",
+      "options": ["O(log N)", "O(1)", "O(N)", "O(N log N)"],
+      "correct_index": 2,
+      "explanation": "A skewed BST degrades to a linked list, resulting in O(N) linear search time."
+    },
+    {
+      "topic_id": "T08",
+      "question": "What is the time complexity to extract the minimum element from a Binary Min-Heap of size N?",
+      "options": ["O(1)", "O(log N)", "O(N)", "O(N log N)"],
+      "correct_index": 1,
+      "explanation": "Extracting root is O(1), but restoring min-heap property via heapify-down takes O(log N)."
+    },
+    {
+      "topic_id": "T09",
+      "question": "What is the space complexity of storing a sparse graph with V vertices and E edges using an Adjacency List?",
+      "options": ["O(V^2)", "O(V + E)", "O(E^2)", "O(V * E)"],
+      "correct_index": 1,
+      "explanation": "Adjacency list stores V list headers and 2E (or E) total node elements: O(V + E)."
+    },
+    {
+      "topic_id": "T10",
+      "question": "Which data structure is essential to implement Breadth-First Search (BFS) on a graph?",
+      "options": ["Stack", "Queue", "Priority Queue", "Disjoint Set"],
+      "correct_index": 1,
+      "explanation": "BFS explores neighbors level-by-level using a First-In First-Out Queue."
+    },
+    {
+      "topic_id": "T11",
+      "question": "Which algorithm computes topological ordering of a Directed Acyclic Graph (DAG) using in-degrees?",
+      "options": ["Dijkstra's Algorithm", "Kahn's Algorithm", "Prim's Algorithm", "Floyd-Warshall Algorithm"],
+      "correct_index": 1,
+      "explanation": "Kahn's algorithm repeatedly removes vertices with 0 in-degree using a queue."
+    },
+    {
+      "topic_id": "T12",
+      "question": "What is the time complexity of Dijkstra's Shortest Path algorithm implemented with a Min-Heap priority queue?",
+      "options": ["O(V^2)", "O((V + E) log V)", "O(V * E)", "O(E^2)"],
+      "correct_index": 1,
+      "explanation": "Using binary heap priority queue, edge relaxations and vertex extractions take O((V + E) log V)."
+    },
+    {
+      "topic_id": "T13",
+      "question": "Which disjoint-set optimizations achieve near O(1) amortized time per operation in Kruskal's algorithm?",
+      "options": [
+        "Path compression and Union by Rank/Size",
+        "Binary heap rebalancing",
+        "AVL tree rotation",
+        "Topological queue processing"
+      ],
+      "correct_index": 0,
+      "explanation": "Path compression + Union by rank achieves inverse Ackermann α(N) amortized time."
+    },
+    {
+      "topic_id": "T14",
+      "question": "What are the two key properties required to apply Dynamic Programming?",
+      "options": [
+        "Greedy choice and Min-heap structure",
+        "Optimal substructure and Overlapping subproblems",
+        "Topological sort and Acyclic dependency",
+        "Divide and Conquer without state caching"
+      ],
+      "correct_index": 1,
+      "explanation": "Dynamic Programming requires optimal solutions from subproblems (optimal substructure) and redundant subproblems (overlapping)."
+    },
+    {
+      "topic_id": "T15",
+      "question": "What is the time complexity of the Floyd-Warshall all-pairs shortest path algorithm on V vertices?",
+      "options": ["O(V^2)", "O(V^3)", "O(V log V)", "O(V * E)"],
+      "correct_index": 1,
+      "explanation": "Floyd-Warshall uses 3 nested loops over all vertices: O(V^3)."
+    }
+  ]
+}

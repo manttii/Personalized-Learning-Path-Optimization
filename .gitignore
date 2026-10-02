@@ -1,0 +1,25 @@
+# Build artifacts
+bin/
+build/
+*.exe
+*.o
+*.obj
+*.pdb
+*.ilk
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+!database/seed_data.sql
+
+# Temporary / OS files
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/
+*.pyc
+
+# IDE configs
+.vscode/
+.idea/

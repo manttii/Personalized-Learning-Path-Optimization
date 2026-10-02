@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Learning Path Optimization - PBL Visualizer Dashboard</title>
+    <!-- Vis.js for DAG Network Graph Visualization -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <!-- Chart.js for Performance Metrics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-left">
+            <div class="badge">PBL Phase-I & II</div>
+            <h1>Personalized Learning Path Optimization</h1>
+            <p class="subtitle">Dynamic DAG Knowledge Mapping & Dijkstra Adaptive Trajectory Engine</p>
+        </div>
+        <div class="header-right">
+            <div class="team-meta">
+                <span><strong>Team:</strong> DSCPP-III-2026-T284</span>
+                <span><strong>Dept:</strong> CSE, Graphic Era University</span>
+                <span><strong>Mentor:</strong> Ram ji Chauhan</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Top Stats Row -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Active Learner</span>
+                    <h3 id="stat-student-name">Priyanshi Saini</h3>
+                    <small id="stat-student-id">ID: 2510011893</small>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon highlight"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Current Goal Node</span>
+                    <h3 id="stat-goal-node">T12: Dijkstra Shortest Path</h3>
+                    <small>Target Trajectory</small>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon success"><i class="fa-solid fa-clock"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Estimated Path Hours</span>
+                    <h3 id="stat-path-hours">24.5 h</h3>
+                    <small class="text-success"><i class="fa-solid fa-arrow-down"></i> 27.8% Time Saved</small>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon primary"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Avg Knowledge Score</span>
+                    <h3 id="stat-avg-prof">78.5%</h3>
+                    <small id="stat-mastered-count">4 / 15 Mastered</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Workspace -->
+        <div class="workspace-grid">
+            <!-- Left: Interactive Graph Visualization -->
+            <section class="graph-card">
+                <div class="card-header">
+                    <h2><i class="fa-solid fa-diagram-project"></i> Curriculum Knowledge DAG Visualizer</h2>
+                    <div class="graph-legend">
+                        <span class="legend-item"><span class="dot active-path"></span> Active Path</span>
+                        <span class="legend-item"><span class="dot mastered"></span> Mastered</span>
+                        <span class="legend-item"><span class="dot pending"></span> Pending</span>
+                        <span class="legend-item"><span class="dot bottleneck"></span> Bottleneck</span>
+                    </div>
+                </div>
+                <div id="network-container"></div>
+                <div class="graph-footer">
+                    <p><i class="fa-solid fa-circle-info"></i> Nodes represent CS topics with dynamic effective weights $W'(v)$. Edges represent prerequisite dependencies. Click any node to view details.</p>
+                </div>
+            </section>
+
+            <!-- Right: Interactive Control & Details -->
+            <section class="control-panel">
+                <!-- Node Detail Inspector -->
+                <div class="panel-card" id="node-inspector">
+                    <h3><i class="fa-solid fa-magnifying-glass"></i> Topic Inspector</h3>
+                    <div id="inspector-content">
+                        <p class="text-muted">Click a node in the graph to inspect effective weight calculation and prerequisite dependencies.</p>
+                    </div>
+                </div>
+
+                <!-- Simulation & Interactive Control -->
+                <div class="panel-card">
+                    <h3><i class="fa-solid fa-sliders"></i> Interactive Adaptive Simulation</h3>
+                    <div class="control-group">
+                        <label for="goal-select">Change Goal Node:</label>
+                        <select id="goal-select" class="form-select">
+                            <option value="T07">T07: BST & Balanced Trees</option>
+                            <option value="T11">T11: Topological Sort & DAGs</option>
+                            <option value="T12" selected>T12: Dijkstra's Shortest Path</option>
+                            <option value="T13">T13: Minimum Spanning Trees</option>
+                            <option value="T14">T14: Dynamic Programming</option>
+                            <option value="T15">T15: Graph Dynamic Programming</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="sim-topic-select">Simulate Quiz Evaluation on Topic:</label>
+                        <select id="sim-topic-select" class="form-select">
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-success" id="btn-simulate-pass"><i class="fa-solid fa-check"></i> Simulate Pass (90%)</button>
+                        <button class="btn btn-danger" id="btn-simulate-fail"><i class="fa-solid fa-triangle-exclamation"></i> Simulate Fail (30%)</button>
+                    </div>
+                    <div id="reroute-alert" class="alert d-none"></div>
+                </div>
+
+                <!-- Comparison Benchmark Chart -->
+                <div class="panel-card">
+                    <h3><i class="fa-solid fa-chart-column"></i> Static vs Adaptive Trajectory Hours</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="benchmarkChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Evaluation Logs Table -->
+        <section class="panel-card full-width">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-clock-rotate-left"></i> Evaluation Logs & Re-routing History (DBMS Audit Log)</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Topic ID</th>
+                            <th>Topic Name</th>
+                            <th>Score</th>
+                            <th>Status</th>
+                            <th>Weight Before</th>
+                            <th>Weight After</th>
+                            <th>Re-routing Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logs-table-body">
+                        <!-- Populated by app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>Graphic Era (Deemed to be University) | Department of Computer Science & Engineering | Academic Session 2026-27</p>
+        <p>Project Team: Priyanshi Saini (2510011893), Ishita Doval, Navdeep Singh Pundir (251037038) | Mentor: Ram ji Chauhan</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
